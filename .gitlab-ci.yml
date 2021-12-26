@@ -24,7 +24,7 @@ cache:
     refs:
       - merge_requests
     changes:
-      - "src/main/java/practice/**"
+      - "src/main/java/practice/**/**"
 
 Strings:
   extends: .maven-jobs
