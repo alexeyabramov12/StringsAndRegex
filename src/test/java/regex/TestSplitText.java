@@ -1,4 +1,4 @@
-package strings;
+package regex;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -9,7 +9,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import practice.strings.SplitText;
+import practice.regex.SplitText;
 
 @DisplayName("Разбивка текста")
 public class TestSplitText {

@@ -1,4 +1,4 @@
-package practice.strings;
+package practice.regex;
 
 public class SplitText {
 

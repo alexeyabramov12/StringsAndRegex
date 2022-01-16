@@ -26,31 +26,49 @@ cache:
     changes:
       - "src/main/java/practice/**/**"
 
-Strings:
+.test-jobs:
   extends: .maven-jobs
   stage: test
-  script:
-    - 'mvn -Dtest="strings/*" test'
   artifacts:
     when: on_failure
     expire_in: 1 week
     reports:
       junit:
         - target/surefire-reports/TEST-*.xml
-  allow_failure: false
+  allow_failure: false 
+   
+Strings-EarningsCalculator:
+  extends: .test-jobs
+  script:
+    - 'mvn -Dtest="strings/TestEarningsCalculator.java" test'
 
-Regex:
-  extends: .maven-jobs
-  stage: test
+Strings-FullNameFormatter:
+  extends: .test-jobs
   script:
-    - 'mvn -Dtest="regex/*" test'
-  artifacts:
-    when: on_failure
-    expire_in: 1 week
-    reports:
-      junit:
-        - target/surefire-reports/TEST-*.xml
-  allow_failure: false
+    - 'mvn -Dtest="strings/TestNameFormatter.java" test'
+
+Regex-EarningsCalculator:
+  extends: .test-jobs
+  script:
+    - 'mvn -Dtest="regex/TestEarningsCalculatorRegex.java" test'
+
+Regex-SplitText:
+  extends: .test-jobs
+  script:
+    - 'mvn -Dtest="regex/TestSplitText.java" test'
+
+Regex-FullNameFormatter:
+  extends: .test-jobs
+  script:
+    - 'mvn -Dtest="regex/TestNameFormatterRegex.java" test'
+
+Regex-PhoneCleaner:
+  extends: .test-jobs
+  script:
+    - 'mvn -Dtest="regex/TestPhoneCleanerRegex.java" test'
+
+
+
 
 codestyle:
   extends: .maven-jobs

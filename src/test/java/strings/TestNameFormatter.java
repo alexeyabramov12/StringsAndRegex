@@ -112,7 +112,7 @@ public class TestNameFormatter {
     void checkRegularExpression() {
         final List<String> lines = new ArrayList<>();
         try {
-            Path path = Paths.get("src", "main", "java", "practice.regex.Main.java");
+            Path path = Paths.get("src", "main", "java", "practice", "strings", "FullNameFormatter.java");
             lines.addAll(Files.readAllLines(path));
         } catch (IOException e) {
             e.printStackTrace();

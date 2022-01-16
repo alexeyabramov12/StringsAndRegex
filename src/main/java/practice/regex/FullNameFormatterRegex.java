@@ -10,6 +10,7 @@ public class FullNameFormatterRegex {
     while (true) {
       String input = scanner.nextLine();
       if (input.equals("0")) {
+        scanner.close();
         break;
       }
       //TODO:напишите ваш код тут, результат вывести в консоль.
