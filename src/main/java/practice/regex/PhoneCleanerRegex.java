@@ -13,7 +13,6 @@ public class PhoneCleanerRegex {
         scanner.close();
         break;
       }
-      //TODO:напишите ваш код тут, результат вывести в консоль.
       String regex1 = "[^0-9]";
       String phoneNumber = input.replaceAll(regex1, "");
       String regex2 = "[0-9]{10}";

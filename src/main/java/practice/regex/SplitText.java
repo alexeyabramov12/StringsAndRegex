@@ -8,7 +8,6 @@ public class SplitText {
     }
 
     public static String splitTextIntoWords(String text) {
-        //TODO реализуйте метод
         if (text.isEmpty()) {
             return "";
         }

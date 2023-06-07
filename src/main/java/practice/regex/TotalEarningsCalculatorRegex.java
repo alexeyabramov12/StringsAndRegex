@@ -10,7 +10,6 @@ public class TotalEarningsCalculatorRegex {
     }
 
     public static int calculateSalarySum(String text) {
-        //TODO: реализуйте метод
         String regex = "[1-9][0-9]{2,}";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(text);

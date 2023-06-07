@@ -13,9 +13,6 @@ public class FullNameFormatter {
                 scanner.close();
                 break;
             }
-
-            //TODO:напишите ваш код тут, результат вывести в консоль.
-            //При невалидном ФИО вывести в консоль: Введенная строка не является ФИО
             String name = input.trim();
             String validChar = "АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя -";
             boolean validName = true;

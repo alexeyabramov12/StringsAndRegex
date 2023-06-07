@@ -1,8 +1,6 @@
 package practice.regex;
 
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class FullNameFormatterRegex {
 
@@ -15,7 +13,6 @@ public class FullNameFormatterRegex {
                 scanner.close();
                 break;
             }
-            //TODO:напишите ваш код тут, результат вывести в консоль.
             //При невалидном ФИО вывести в консоль: Введенная строка не является ФИО
             String name = input.trim();
             String regex = "([АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя -]{2,}){3}";
