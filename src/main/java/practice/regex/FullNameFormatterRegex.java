@@ -13,7 +13,6 @@ public class FullNameFormatterRegex {
                 scanner.close();
                 break;
             }
-            //При невалидном ФИО вывести в консоль: Введенная строка не является ФИО
             String name = input.trim();
             String regex = "([АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя -]{2,}){3}";
             if (!name.matches(regex)) {

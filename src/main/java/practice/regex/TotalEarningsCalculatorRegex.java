@@ -1,12 +1,21 @@
 package practice.regex;
 
+import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class TotalEarningsCalculatorRegex {
 
     public static void main(String[] args) {
-
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            String input = scanner.nextLine();
+            if (input.equals("0")) {
+                scanner.close();
+                break;
+            }
+            System.out.println(calculateSalarySum(input));
+        }
     }
 
     public static int calculateSalarySum(String text) {
