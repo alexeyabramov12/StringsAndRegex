@@ -25,7 +25,7 @@ public class PhoneCleanerRegex {
         continue;
       }
       if (!phoneNumber.matches(regex3)) {
-        System.out.println("Неверный формат номера");
+        System.out.println("Invalid number format.");
         break;
       }
       if (phoneNumber.charAt(0) == '8') {

@@ -62,32 +62,31 @@ public class TestNameFormatterRegex {
     }
 
     @Test
-    @DisplayName("Текст = Иванов Иван Иванович")
+    @DisplayName("Текст = Ivanov Ivan Ivanovich")
     void formatFullName() {
         launchApplication(
-                collectTestInput("Иванов Иван Иванович"),
+                collectTestInput("Ivanov Ivan Ivanovich"),
                 collectTestOutput(
-                        String.format("Фамилия: %s%nИмя: %s%nОтчество: %s", "Иванов", "Иван", "Иванович"))
+                        String.format("Surname: %s%nName: %s%nPatronymic: %s", "Ivanov", "Ivan", "Ivanovich"))
         );
     }
 
     @Test
-    @DisplayName("Текст = Салтыков-Щедрин Михаил Евграфович")
+    @DisplayName("Текст = Saltikov-Shedrin Mihail Evgenevich")
     void formatFullNameWithDoubleSurname() {
         launchApplication(
-                collectTestInput("Салтыков-Щедрин Михаил Евграфович"),
+                collectTestInput("Saltikov-Shedrin Mihail Evgenevich"),
                 collectTestOutput(
-                        String.format("Фамилия: %s%nИмя: %s%nОтчество: %s", "Салтыков-Щедрин", "Михаил",
-                                "Евграфович"))
+                        String.format("Surname: %s%nName: %s%nPatronymic: %s", "Saltikov-Shedrin", "Mihail", "Evgenevich"))
         );
     }
 
     @Test
-    @DisplayName("Текст = Иван Иван Иванович вв2ввв")
+    @DisplayName("Текст = Ivanov Ivan Ivanovich vv2vvv")
     void superfluousWord() {
         launchApplication(
-                collectTestInput("Иван Иван Иванович вв2ввв"),
-                collectTestOutput("Введенная строка не является ФИО"));
+                collectTestInput("Ivanov Ivan Ivanovich vv2vvv"),
+                collectTestOutput("The string entered is not a full name."));
     }
 
     @Test
@@ -95,15 +94,15 @@ public class TestNameFormatterRegex {
     void numberInput() {
         launchApplication(
                 collectTestInput("1111 2222 3333"),
-                collectTestOutput("Введенная строка не является ФИО"));
+                collectTestOutput("The string entered is not a full name."));
     }
 
     @Test
-    @DisplayName("Текст = Иван")
+    @DisplayName("Текст = Ivan")
     void oneWord() {
         launchApplication(
-                collectTestInput("Иван"),
-                collectTestOutput("Введенная строка не является ФИО"));
+                collectTestInput("Ivan"),
+                collectTestOutput("The string entered is not a full name."));
     }
 
     @Test

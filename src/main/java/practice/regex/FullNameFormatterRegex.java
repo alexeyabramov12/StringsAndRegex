@@ -14,15 +14,15 @@ public class FullNameFormatterRegex {
                 break;
             }
             String name = input.trim();
-            String regex = "([АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя -]{2,}){3}";
+            String regex = "([ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz -]{2,}){3}";
             if (!name.matches(regex)) {
-                System.out.println("Введенная строка не является ФИО");
+                System.out.println("The string entered is not a full name.");
                 break;
             }
-            String[] name1 = name.split("\\s");
-            System.out.println("Фамилия: " + name1[0]);
-            System.out.println("Имя: " + name1[1]);
-            System.out.println("Отчество: " + name1[2]);
+            String[] array = name.split("\\s");
+            System.out.println("Surname: " + array[0]);
+            System.out.println("Name: " + array[1]);
+            System.out.println("Patronymic: " + array[2]);
         }
     }
 

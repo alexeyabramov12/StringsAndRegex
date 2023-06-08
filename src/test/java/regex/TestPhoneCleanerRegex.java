@@ -38,7 +38,7 @@ class TestPhoneCleanerRegex {
   /**
    * string when phone number not valid
    */
-  private static final String NOT_VALID_PHONE_RESPONSE = "Неверный формат номера\n";
+  private static final String NOT_VALID_PHONE_RESPONSE = "Invalid number format.\n";
   /**
    * string at which the testing program will terminate
    */
